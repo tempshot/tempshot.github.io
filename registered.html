@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registered</title>
+        <style>
+        body{
+            overflow: hidden;
+            background-image: url(https://wallpaperaccess.com/full/279681.jpg);
+            background-position: center ;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        fieldset{
+            text-align: center;
+            margin: 250px 50px 400px 700px;
+            padding: 40px 70px 40px 70px;        
+            border: none;
+            font-size: 22px;
+            background:#00000086;
+            box-shadow: 0px 20px 20px 20px #0000001a,0px 20px 20px 20px #0000001f;
+            color: #ffffff;   
+        }
+        .fee{
+            font-family: sans-serif;
+        }
+        </style>
+    </head>
+<body>
+    <fieldset>
+        <div>
+        <h1>Registered successfully!</h1>
+        
+            {% for i in id_no %}
+        
+            <p>You are successfully registered as <strong>{{i[1]}} {{i[2]}}</strong> and your student ID is <strong>{{i[0]}}</strong> starting from <strong >{{i[8]}}</strong> at <strong >{{i[9]}}</strong>. </p>
+            
+            {% if i[7] == 'Java programming' %}
+            <p class="fee">You opted for <strong >Java programming</strong> and it's fee is <strong >Rs. 3000</strong>.</p>
+
+            {% elif i[7] == 'Artificial Intelligence' %}
+            <p class="fee">You opted for <strong >Artificial Intelligence</strong> and it's fee is <strong >Rs. 4000</strong>.</p>
+
+            {% elif i[7] == 'Web-development' %}
+            <p class="fee">You opted for <strong >Web-development</strong> and it's fee is <strong >Rs. 3500</strong>.</p>
+
+            {% elif i[7] == 'Python programming' %}
+            <p class="fee">You opted for <strong >Python programming</strong> and it's fee is <strong >Rs. 2900</strong>.</p>        
+
+            {% endif %}
+            {% endfor %}
+        </div>
+    </fieldset>
+</body>
+</html>
