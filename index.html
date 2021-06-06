@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Registration page</title>
+    <style> 
+        body{
+            background-color: #dedadf;
+            background-image: url(https://wallpaperaccess.com/full/279681.jpg);
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            background-position: center ;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .actuall {
+            font-family:'Times New Roman', Times, serif ;
+            text-align: left;
+        }
+        
+        input[id = id], select {
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: 100%;
+            box-shadow: 0 15px 16px 0 #0000003d,0 17px 50px 0 #00000030;
+            border: none;
+            font-size: 14.3px;
+        }
+        input:hover, select:hover, input[type = radio]:hover{
+            background-color: #ece8e8;
+            border: solid whitesmoke;
+        }
+        input[type=submit]{
+            background-color: #3653d6d8;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 15px 16px 0 #0000003d,0 17px 50px 0 #00000030;
+            font-size: 20px;
+        }
+        input[type=submit]:hover {
+            background-color: #1a2166;
+            color: white;
+        }
+        input[id=reset]{
+            background-color: rgba(245, 245, 245, 0.616);
+            color: black;
+            padding: 5px 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 15px 16px 0 #0201013d,0 17px 50px 0 #00000030;
+            font-size: 15px;
+        }
+        input[id=reset]:hover {
+            background-color: white;
+            color: black;
+        }
+        div{
+            display: flex;
+        }
+        fieldset{
+            border: none;
+        }
+        .class1{
+            margin: 0px 750px;
+            padding: 0px 30px;
+            background-color: #00000086;
+            border: 50px black;
+            box-shadow: 0px 20px 20px 20px #0000001a,0px 20px 20px 20px #0000001f;
+        }
+        .class2{
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+        }
+        .class3{
+            font-size: 18px;
+            font-style: italic;
+        }
+        input[type = radio]{
+            box-shadow: 0 50px 50px 0 #0201018a,0 50px 50px 0 #0201018a;
+        }
+    </style>     
+</head>
+<body>
+    <div class="actuall">
+        <fieldset class="class1">
+        <strong><h1>Registration form</h1></strong>
+        <form action="" method="POST" target="_blank" autocomplete="off">
+
+            <div>
+            <fieldset>
+            <legend>First name:</legend>
+            <input type="text" id="id" placeholder="Please enter your first name." name="f_name" title="Enter your name" maxlength="20" style="width: 250px;" required>
+            </fieldset>
+            
+            <fieldset>
+            <legend>Last name:</legend>
+            <input type="text" id="id" placeholder="Please enter your last name." name="l_name" style="width: 250px;" maxlength="20" title="Enter your surname" required><br><br>
+            </fieldset>
+            </div>
+
+            <fieldset>
+            <legend>Email:</legend>
+            <input type="email" id = "id" placeholder="Please enter your email address." name="mail" title="Enter your E-mail address" required><br><br>
+            </fieldset>
+
+            <div>
+            <fieldset>
+            <legend>Date of birth:</legend>
+            <input type="date" id="id" name="dob" title="Enter your date of birth" required style="width: 250px;"><br><br>
+            </fieldset>
+            
+
+            <fieldset>
+            <legend>Phone number:</legend>
+            <input type="text" id = "id" placeholder="Please enter your phone number." name="phone" maxlength="10" pattern="{10}" title="Enter your phone number" style="width: 250px;" required><br><br>
+            </fieldset>
+            </div>
+
+            <fieldset>
+            <legend>Address:</legend>
+            <input type="text" id="id" placeholder="Please enter your address." name="address_" maxlength="50" title="Enter your Address" required><br><br>
+            </fieldset>
+            
+            <fieldset>
+            <legend>Course:</legend>
+            <input type="radio" id="course1" name="course" value="Java programming" title="Choose course" required>
+            <label for="course1" class="class3"> Java programming</label><br>
+            <input type="radio" id="course2" name="course" value="Artificial Intelligence" title="Choose course" required>
+            <label for="course2" class="class3"> Artificial Intelligence</label><br>
+            <input type="radio" id="course3" name="course" value="Web-development" title="Choose course" required>
+            <label for="course3" class="class3"> Web-development</label><br>
+            <input type="radio" id="course4" name="course" value="Python programming" title="Choose course" required>
+            <label for="course4" class="class3"> Python programming</label><br><br>
+            </fieldset>
+
+            <div>
+            <fieldset>
+            <legend>Starting from:</legend>
+            <input type="date" id="id" name="startingFrom" title="Enter date" style="width: 250px;" required><br><br>
+            </fieldset>
+            
+            <fieldset>
+            <legend>Time slot:</legend>
+            <select id="id" name="timeSlot" style="width: 250px;" required>
+                <option selected hidden value="">Select option </option>
+                <option value="9-10am">9-10 AM</option>
+                <option value="10-11pm">10-11 AM</option>
+                <option value="5-6pm">5-6 PM</option>
+                <option value="6-7pm">6-7 PM</option>
+                <option value="7-8pm">7-8 PM</option>
+                <option value="8-9pm">8-9 PM</option>
+            </select>
+            </fieldset>
+            </div>
+
+            <fieldset class="class2">
+            <input type="submit" id="register" value="Register" title="Register" ><br>
+            <input type="reset" id = "reset" title="Reset">
+            </fieldset>
+    `   </form>
+        </fieldset>
+    </div>
+</body>
+</html>
